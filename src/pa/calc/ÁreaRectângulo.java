@@ -1,9 +1,8 @@
 package pa.calc;
 
-public class ¡reaRect‚ngulo implements ItfOper {
-
+public class √ÅreaRect√¢ngulo implements ItfOper {
 	/**
-	 * Calcula a ¡rea de um Rect‚ngulo
+	 * Calcula a ÔøΩrea de um RectÔøΩngulo
 	 */
 	@Override
 	public double oper(double op1, double op2) {
