@@ -1,3 +1,9 @@
+
+/**
+ * Calculadora 
+ * @author Grupo RUMOS
+ * 
+ */
 package pa.calc;
 
 public class Calculadora {
