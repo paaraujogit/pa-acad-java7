@@ -20,7 +20,10 @@ public class Calculadora {
 	    return número1 + número2;
     }
 
+    public static double subtrair(double número1, double número2){
 
+	    return número1 - número2;
+    }
 
 
 }
