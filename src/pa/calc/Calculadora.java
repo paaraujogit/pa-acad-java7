@@ -5,7 +5,7 @@ public class Calculadora {
 	public static void main(String[] args) {
 		// OperEx Example
 		OperEx opEx = new OperEx();
-		double resEx = opEx.oper(1, 2);
+		double resEx = opEx.oper(1, 3);
 		System.out.println(resEx);
 		
 		// Oper02 - Solution
