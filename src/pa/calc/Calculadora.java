@@ -1,4 +1,12 @@
-﻿package pa.calc;
+﻿﻿package pa.calc;
+=======
+
+/**
+ * Calculadora 
+ * @author Grupo RUMOS
+ * 
+ */
+package pa.calc;
 
 public class Calculadora {
 
@@ -29,6 +37,7 @@ public class Calculadora {
 
 	    return número1 - número2;
     }
+
 
 
 }
