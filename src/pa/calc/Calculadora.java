@@ -11,7 +11,7 @@ public class Calculadora {
 	public static void main(String[] args) {
 		// OperEx Example
 		OperEx opEx = new OperEx();
-		double resEx = opEx.oper(1, 2);
+		double resEx = opEx.oper(1, 3);
 		System.out.println(resEx);
 		
 		// Oper02 - Solution
@@ -20,5 +20,17 @@ public class Calculadora {
 		System.out.println(res02);
 
 	}
+
+	public static double adicionar(double número1, double número2){
+
+	    return número1 + número2;
+    }
+
+    public static double subtrair(double número1, double número2){
+
+	    return número1 - número2;
+    }
+
+
 
 }
