@@ -15,4 +15,12 @@ public class Calculadora {
 
 	}
 
+	public static double adicionar(double número1, double número2){
+
+	    return número1 + número2;
+    }
+
+
+
+
 }
