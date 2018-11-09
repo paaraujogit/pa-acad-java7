@@ -1,4 +1,4 @@
-package pa.calc;
+﻿package pa.calc;
 
 public class Calculadora {
 
@@ -19,5 +19,16 @@ public class Calculadora {
           return num1+num2;
            
         }
+
+	public static double adicionar(double número1, double número2){
+
+	    return número1 + número2;
+    }
+
+    public static double subtrair(double número1, double número2){
+
+	    return número1 - número2;
+    }
+
 
 }
