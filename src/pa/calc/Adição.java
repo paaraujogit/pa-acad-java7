@@ -1,6 +1,6 @@
 package pa.calc;
 
-public class Adição implements ItfOper {
+public class AdiÃ§Ã£o implements ItfOper {
 
     @Override
     public double oper(double op1, double op2) {
