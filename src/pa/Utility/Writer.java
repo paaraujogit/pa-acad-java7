@@ -1,4 +1,4 @@
-package pa.calc.Utility;
+package pa.Utility;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
