@@ -20,6 +20,12 @@ public class Calculadora {
 		Oper02 op02 = new Oper02();
 		double res02 = op02.oper(10, 2);
 		System.out.println(res02);
+		
+		// Oper03 - Solution
+		Oper03 op03A = new Oper03();
+		double res03A = op03A.oper(10, 2);
+		System.out.println(res03A);
+
 
 	}
 
