@@ -3,8 +3,13 @@ package pa.Calculator;
 public class Calculator implements Adder, Subtractor, Multiplicator, Divider {
 
     public long add(long... operands){
+        long retSum = 0;
 
-        return 0;
+        for(long value : operands){
+            retSum += value;
+        }
+
+        return retSum;
     }
 
     public long subtract(long... operands){
