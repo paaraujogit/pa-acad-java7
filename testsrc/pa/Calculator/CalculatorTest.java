@@ -43,6 +43,6 @@ class CalculatorTest {
     @Test
     @DisplayName(("divide implements Divider"))
     void divide() {
-        
+
     }
 }
