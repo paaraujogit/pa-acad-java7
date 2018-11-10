@@ -1,14 +1,8 @@
-﻿package pa.calc;
-
-/**
- * Calculadora ###
- * @author Grupo RUMOS
- *
- */
+package pa.calc;
 
 public class Calculadora {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         // OperEx Example
         OperEx opEx = new OperEx();
         double resEx = opEx.oper(1, 3);
@@ -24,26 +18,5 @@ public class Calculadora {
         double res03A = op03A.oper(10, 2);
         System.out.println(res03A);
 
-
     }
-
-    public double soma(double num1, double num2) {
-        return num1 + num2;
-
-    }
-
-    public static double adicionar(double número1, double número2) {
-
-        return número1 + número2;
-    }
-
-    public static double subtrair(double número1, double número2) {
-
-        return número1 - número2;
-    }
-
-    public static double multiplicar(double número1, double número2) {
-        return número1 * número2;
-    }
-
 }
