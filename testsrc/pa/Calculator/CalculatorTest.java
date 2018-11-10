@@ -54,13 +54,13 @@ class CalculatorTest {
                 },
                 () -> {
                     long[] numbers = {200, 300, -400};
-                    long expectedResult = 200 - 300 - (-400);
+                    long expectedResult = 200L - 300L - (-400L);
                     long givenResult = classUnderTest.add(numbers);
                     assertEquals(expectedResult, givenResult);
                 },
                 () -> {
                     long[] numbers = {0, 0, 0, 0};
-                    long expectedResult = 0 + 0 + 0 + 0;
+                    long expectedResult = 0L;
                     long givenResult = classUnderTest.add(numbers);
                     assertEquals(expectedResult, givenResult);
                 }
@@ -70,7 +70,26 @@ class CalculatorTest {
     @Test
     @DisplayName("multiply implements Multiplicator")
     void multiply() {
-
+        assertAll(
+                () -> {
+                    long[] numbers = {10, 9, 1, 0};
+                    long expectedResult = 0L;
+                    long givenResult = classUnderTest.add(numbers);
+                    assertEquals(expectedResult, givenResult);
+                },
+                () -> {
+                    long[] numbers = {200, 300, -400};
+                    long expectedResult = -24_000_000L;
+                    long givenResult = classUnderTest.add(numbers);
+                    assertEquals(expectedResult, givenResult);
+                },
+                () -> {
+                    long[] numbers = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+                    long expectedResult = 36_288_000_000_000_000L;
+                    long givenResult = classUnderTest.add(numbers);
+                    assertEquals(expectedResult, givenResult);
+                }
+        );
     }
 
     @Test
