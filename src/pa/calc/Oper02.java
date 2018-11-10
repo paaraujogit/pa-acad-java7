@@ -3,7 +3,7 @@ package pa.calc;
 public class Oper02 implements ItfOper {
 
 	/**
-	 * Calcula o módulo
+	 * Calcula o mÃ³dulo
 	 */
 	@Override
 	public double oper(double op1, double op2) {

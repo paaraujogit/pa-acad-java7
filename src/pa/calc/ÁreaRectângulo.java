@@ -2,7 +2,7 @@ package pa.calc;
 
 public class ÁreaRectângulo implements ItfOper {
 	/**
-	 * Calcula a �rea de um Rect�ngulo
+	 * Calcula a área de um Rectângulo
 	 */
 	@Override
 	public double oper(double op1, double op2) {

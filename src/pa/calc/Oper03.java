@@ -3,7 +3,7 @@ package pa.calc;
 public class Oper03 implements ItfOper {
 
 	/**
-	 * Calcula a divis„o
+	 * Calcula a divis√£o
 	 */
 	@Override
 	public double oper(double op1, double op2) {
