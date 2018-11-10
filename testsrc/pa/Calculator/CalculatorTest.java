@@ -49,19 +49,19 @@ class CalculatorTest {
                 () -> {
                     long[] numbers = {100, 34, -17, 4};
                     long expectedResult = 100 - 34 - (-17) - 4;
-                    long givenResult = classUnderTest.add(numbers);
+                    long givenResult = classUnderTest.subtract(numbers);
                     assertEquals(expectedResult, givenResult);
                 },
                 () -> {
                     long[] numbers = {200, 300, -400};
                     long expectedResult = 200L - 300L - (-400L);
-                    long givenResult = classUnderTest.add(numbers);
+                    long givenResult = classUnderTest.subtract(numbers);
                     assertEquals(expectedResult, givenResult);
                 },
                 () -> {
                     long[] numbers = {0, 0, 0, 0};
                     long expectedResult = 0L;
-                    long givenResult = classUnderTest.add(numbers);
+                    long givenResult = classUnderTest.subtract(numbers);
                     assertEquals(expectedResult, givenResult);
                 }
         );

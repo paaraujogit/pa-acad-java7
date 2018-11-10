@@ -13,8 +13,13 @@ public class Calculator implements Adder, Subtractor, Multiplicator, Divider {
     }
 
     public long subtract(long... operands){
+        long retSubtract = operands[0];
 
-        return 0;
+        for(int i = 1; i < operands.length; ++i){
+            retSubtract -= operands[i];
+        }
+
+        return retSubtract;
     }
 
     public long multiply(long... operands){
