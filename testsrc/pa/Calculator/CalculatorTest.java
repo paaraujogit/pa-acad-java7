@@ -95,6 +95,29 @@ class CalculatorTest {
     @Test
     @DisplayName(("divide implements Divider"))
     void divide() {
-
+        assertAll(
+                () -> {
+                    try{
+                        long[] numbers = {10, 9, 1, 0};
+                        long expectedResult = 0L;
+                        long givenResult = classUnderTest.add(numbers);
+                        assertEquals(expectedResult, givenResult);
+                    } catch (ArithmeticException e) {
+                        System.out.println("Don't divide by 0");
+                    }
+                },
+                () -> {
+                    long[] numbers = {81, 9, 3};
+                    long expectedResult = 3;
+                    long givenResult = classUnderTest.add(numbers);
+                    assertEquals(expectedResult, givenResult);
+                },
+                () -> {
+                    long[] numbers = {100, 50, 1};
+                    long expectedResult = 2;
+                    long givenResult = classUnderTest.add(numbers);
+                    assertEquals(expectedResult, givenResult);
+                }
+        );
     }
 }
