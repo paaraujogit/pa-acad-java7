@@ -1,15 +1,11 @@
 package pa.Calculator;
 
 import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
 
     private Calculator classUnderTest;
-
-    @BeforeAll
-    static void initializer(){
-
-    }
 
     @BeforeEach
     void setUpEach() throws Exception{
@@ -24,7 +20,27 @@ class CalculatorTest {
     @Test
     @DisplayName("add implements Adder")
     void add() {
+        assertAll(
+                () -> {
+                    long[] numbers = {10, 23, -1, 16};
+                    long expectedResult = 10 + 23 + -1 + 16;
+                    long givenResult = classUnderTest.add(numbers);
+                    assertEquals(expectedResult, givenResult);
+                },
+                () -> {
+                    long[] numbers = {100, 102};
+                    long expectedResult = 100 + 102;
+                    long givenResult = classUnderTest.add(numbers);
+                    assertEquals(expectedResult, givenResult);
+                },
+                () -> {
+                    long[] numbers = {0, 0, 0, 0};
+                    long expectedResult = 0 + 0 + 0 + 0;
+                    long givenResult = classUnderTest.add(numbers);
+                    assertEquals(expectedResult, givenResult);
+                }
 
+        );
 
     }
 
