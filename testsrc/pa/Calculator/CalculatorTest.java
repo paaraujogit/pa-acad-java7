@@ -39,15 +39,32 @@ class CalculatorTest {
                     long givenResult = classUnderTest.add(numbers);
                     assertEquals(expectedResult, givenResult);
                 }
-
         );
-
     }
 
     @Test
     @DisplayName("subtract implements Subtractor")
     void subtract() {
-
+        assertAll(
+                () -> {
+                    long[] numbers = {100, 34, -17, 4};
+                    long expectedResult = 100 - 34 - (-17) - 4;
+                    long givenResult = classUnderTest.add(numbers);
+                    assertEquals(expectedResult, givenResult);
+                },
+                () -> {
+                    long[] numbers = {200, 300, -400};
+                    long expectedResult = 200 - 300 - (-400);
+                    long givenResult = classUnderTest.add(numbers);
+                    assertEquals(expectedResult, givenResult);
+                },
+                () -> {
+                    long[] numbers = {0, 0, 0, 0};
+                    long expectedResult = 0 + 0 + 0 + 0;
+                    long givenResult = classUnderTest.add(numbers);
+                    assertEquals(expectedResult, givenResult);
+                }
+        );
     }
 
     @Test
