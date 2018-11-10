@@ -38,7 +38,14 @@ class CalculatorTest {
                     long expectedResult = 0 + 0 + 0 + 0;
                     long givenResult = classUnderTest.add(numbers);
                     assertEquals(expectedResult, givenResult);
-                }
+                }/*,
+                () -> {
+                    //add throw overflow exception
+                    long[] numbers = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+                    long expectedResult = 36_288_000_000_000_000L;
+                    long givenResult = classUnderTest.add(numbers);
+                    assertEquals(expectedResult, givenResult);
+                }*/
         );
     }
 
@@ -63,7 +70,14 @@ class CalculatorTest {
                     long expectedResult = 0L;
                     long givenResult = classUnderTest.subtract(numbers);
                     assertEquals(expectedResult, givenResult);
-                }
+                }/*,
+                () -> {
+                    //add throw overflow exception
+                    long[] numbers = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+                    long expectedResult = 36_288_000_000_000_000L;
+                    long givenResult = classUnderTest.subtract(numbers);
+                    assertEquals(expectedResult, givenResult);
+                }*/
         );
     }
 
@@ -74,21 +88,28 @@ class CalculatorTest {
                 () -> {
                     long[] numbers = {10, 9, 1, 0};
                     long expectedResult = 0L;
-                    long givenResult = classUnderTest.add(numbers);
+                    long givenResult = classUnderTest.multiply(numbers);
                     assertEquals(expectedResult, givenResult);
                 },
                 () -> {
                     long[] numbers = {200, 300, -400};
                     long expectedResult = -24_000_000L;
-                    long givenResult = classUnderTest.add(numbers);
+                    long givenResult = classUnderTest.multiply(numbers);
                     assertEquals(expectedResult, givenResult);
                 },
                 () -> {
                     long[] numbers = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
                     long expectedResult = 36_288_000_000_000_000L;
-                    long givenResult = classUnderTest.add(numbers);
+                    long givenResult = classUnderTest.multiply(numbers);
                     assertEquals(expectedResult, givenResult);
-                }
+                }/*,
+                () -> {
+                    //add throw overflow exception
+                    long[] numbers = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+                    long expectedResult = 36_288_000_000_000_000L;
+                    long givenResult = classUnderTest.multiply(numbers);
+                    assertEquals(expectedResult, givenResult);
+                }*/
         );
     }
 
@@ -97,27 +118,30 @@ class CalculatorTest {
     void divide() {
         assertAll(
                 () -> {
-                    try{
-                        long[] numbers = {10, 9, 1, 0};
-                        long expectedResult = 0L;
-                        long givenResult = classUnderTest.add(numbers);
-                        assertEquals(expectedResult, givenResult);
-                    } catch (ArithmeticException e) {
-                        System.out.println("Don't divide by 0");
-                    }
+                    long[] numbers = {27, 9, 3};
+                    long expectedResult = 1;
+                    long givenResult = classUnderTest.divide(numbers);
+                    assertEquals(expectedResult, givenResult);
                 },
                 () -> {
                     long[] numbers = {81, 9, 3};
                     long expectedResult = 3;
-                    long givenResult = classUnderTest.add(numbers);
+                    long givenResult = classUnderTest.divide(numbers);
                     assertEquals(expectedResult, givenResult);
                 },
                 () -> {
                     long[] numbers = {100, 50, 1};
                     long expectedResult = 2;
-                    long givenResult = classUnderTest.add(numbers);
+                    long givenResult = classUnderTest.divide(numbers);
                     assertEquals(expectedResult, givenResult);
-                }
+                }/*,
+                () -> {
+                    //add throw Arithmetic exception (divide by zero)
+                    long[] numbers = {10, 0};
+                    long expectedResult = ;
+                    long givenResult = classUnderTest.divide(numbers);
+                    assertEquals(expectedResult, givenResult);
+                }*/
         );
     }
 }
