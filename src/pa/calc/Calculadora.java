@@ -1,5 +1,11 @@
 package pa.calc;
 
+/**
+ * Calculadora ###
+ * @author Grupo RUMOS
+ *
+ */
+
 public class Calculadora {
 
     public static void main(String[] args){
