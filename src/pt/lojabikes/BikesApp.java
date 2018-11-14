@@ -36,7 +36,7 @@ public class BikesApp {
 	logVenda(cliente);
         cliente = loja.getCliente(1);        
         loja.vender(bike, cliente);
-	logVenda(cliente);
+	logVenda(cliente); 
    
         
         
