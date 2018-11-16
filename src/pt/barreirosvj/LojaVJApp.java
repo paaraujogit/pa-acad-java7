@@ -22,6 +22,7 @@ public class LojaVJApp {
             videojogo -> "PS4".equals(videojogo.getCaracterísticas().getPlataforma()) & 20.0 <= videojogo.getPreço().getValor()
         );
         System.out.println(resultados2);
+        System.out.println("Fim");
         
         /*ArrayList<Videojogo> resultados = loja.procurarJogos("PS4");
         System.out.println(resultados);
